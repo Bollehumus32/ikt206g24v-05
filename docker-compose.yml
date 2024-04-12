@@ -3,14 +3,16 @@ version: '3.4'
 services:
   web:
     build: .
-    ports:
-      - "80:80"
-      - "443:443"
+    environment:
+      - ASPNETCORE_URLS=http://+:80  # This line sets the listen URL for the web service
     depends_on:
       - db
+    ports:
+      - "8080:80"  # This line maps port 8080 on the host to port 80 on the container
 
   db:
     image: postgres
+    container_name: postgres
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: Password1.
@@ -21,8 +23,8 @@ services:
   proxy:
     image: caddy
     ports:
-      - "80:80"
-      - "443:443"
+      - "80:80"  # Public HTTP port
+      - "443:443"  # Public HTTPS port
     volumes:
       - ./data/data:/data
       - ./data/config:/config

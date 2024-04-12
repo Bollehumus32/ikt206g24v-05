@@ -1,15 +1,23 @@
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
-WORKDIR /ikt206g24v-05
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+USER $APP_UID
+WORKDIR /app
+EXPOSE 8080
+EXPOSE 8081
 
-# Copy everything
-COPY . ./
-# Restore as distinct layers
-RUN dotnet restore
-# Build and publish a release
-RUN dotnet publish -c Release -o out
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+ARG BUILD_CONFIGURATION=Release
+WORKDIR /src
+COPY ["Example.csproj", "./"]
+RUN dotnet restore "Example.csproj"
+COPY . .
+WORKDIR "./"
+RUN dotnet build "Example.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
-# Build runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
-WORKDIR /ikt206g24v-05
-COPY --from=build-env /ikt206g24v-05/out .
+FROM build AS publish
+ARG BUILD_CONFIGURATION=Release
+RUN dotnet publish "Example.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "Example.dll"]

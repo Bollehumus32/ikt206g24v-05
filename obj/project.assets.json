@@ -7330,11 +7330,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/simenm/Documents/School/4. Semester/IKT-206 (DevOps)/ikt206g24v-05/Example.csproj",
+      "projectUniqueName": "/Users/simenm/Documents/School/4. Semester/IKT-206 (DevOps)/VPSTesting/ikt206g24v-05/Example.csproj",
       "projectName": "Example",
-      "projectPath": "/Users/simenm/Documents/School/4. Semester/IKT-206 (DevOps)/ikt206g24v-05/Example.csproj",
+      "projectPath": "/Users/simenm/Documents/School/4. Semester/IKT-206 (DevOps)/VPSTesting/ikt206g24v-05/Example.csproj",
       "packagesPath": "/Users/simenm/.nuget/packages/",
-      "outputPath": "/Users/simenm/Documents/School/4. Semester/IKT-206 (DevOps)/ikt206g24v-05/obj/",
+      "outputPath": "/Users/simenm/Documents/School/4. Semester/IKT-206 (DevOps)/VPSTesting/ikt206g24v-05/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/simenm/.nuget/NuGet/NuGet.Config"

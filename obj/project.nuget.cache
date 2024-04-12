@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lIV8Gk85V1bUy+IV0ntAxwGV58xiTQQ8gZiHUd53E9EcC9vRf0w1/ckwyVEP/OM80YAAwNqF7InTaa4to4sqUw==",
+  "dgSpecHash": "fL2p8gHvp3cM5f38zd9sVtjqWRpT6MP/IMCpO6Cq+zewg5HAlChOmJBm8JImYbg2ituGBfS3Pfw9WOliHOJNkQ==",
   "success": true,
-  "projectFilePath": "/Users/simenm/Documents/School/4. Semester/IKT-206 (DevOps)/ikt206g24v-05/Example.csproj",
+  "projectFilePath": "/Users/simenm/Documents/School/4. Semester/IKT-206 (DevOps)/VPSTesting/ikt206g24v-05/Example.csproj",
   "expectedPackageFiles": [
     "/Users/simenm/.nuget/packages/humanizer/2.14.1/humanizer.2.14.1.nupkg.sha512",
     "/Users/simenm/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
