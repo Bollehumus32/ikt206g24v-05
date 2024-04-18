@@ -19,6 +19,7 @@ if (builder.Environment.IsDevelopment())
     builder.Services.AddDbContext<ApplicationDbContext>(options =>
         options.UseSqlite(connectionString));
 }
+
 else
 {
     // Use PostgreSQL in production

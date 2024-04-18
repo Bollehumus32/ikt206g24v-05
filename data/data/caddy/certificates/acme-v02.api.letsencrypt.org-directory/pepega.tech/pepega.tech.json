@@ -1,0 +1,9 @@
+{
+	"sans": [
+		"pepega.tech"
+	],
+	"issuer_data": {
+		"url": "https://acme-v02.api.letsencrypt.org/acme/cert/04907ea36a71db3ad58e5ce4fdb2b2ce47d5",
+		"ca": "https://acme-v02.api.letsencrypt.org/directory"
+	}
+}
